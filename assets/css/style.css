@@ -1,0 +1,83 @@
+:root {
+    --cyber-blue: #00f3f9;
+    --cyber-green: #00fe00;
+    --cyber-pink: #e120f0;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    outline: 2px solid var(--cyber-blue);
+}
+
+main {
+    display: flex;
+    
+    flex-wrap: nowrap;  
+    justify-content: space-evenly;
+    padding: 2rem;
+    overflow-x:hidden;
+}
+
+.splash {
+    display: flex;
+    outline-style: dashed;
+    width: 50%;
+    height: 800px;
+    color: var(--cyber-pink);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    padding: 2rem;
+
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 2px solid var(--cyber-blue);
+    outline-offset: -2px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+
+
+/* media query for larger screens */
+@media screen and (max-width: 768px) {
+
+    header {
+      width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .splash {
+        width:100%;
+    }
+
+}
+
+
+.dark {
+    background-color: black;
+    outline: 2px solid var(--cyber-blue);
+}
+
+.light {
+    background-color: white;
+    outline: 2px solid var(orange);
+}
