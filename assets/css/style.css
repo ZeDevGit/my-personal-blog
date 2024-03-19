@@ -25,6 +25,7 @@ main {
     justify-content: space-evenly;
     padding: 2rem;
     overflow-x:hidden;
+    gap: 2.5%;
 }
 
 .splash {
