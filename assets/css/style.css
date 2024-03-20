@@ -8,15 +8,33 @@ body {
     background-color: black;
 }
 
+/* Header content is the same across the index.html and blog.html pages
+ using flexbox the h1 and label elements are separated using justify-content: space-between*/
+
 header {
     width: 100%;
     height: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding: 2rem;
     outline: 2px solid var(--cyber-blue);
+    color: var(--cyber-green);
 }
+
+header h1{
+    flex-direction: row;
+    justify-content: flex-start;
+    color: var(--cyber-blue);
+}
+
+header label {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main element is used to contain both separate splash elements. */
 
 main {
     display: flex;
@@ -27,6 +45,9 @@ main {
     overflow-x:hidden;
     gap: 2.5%;
 }
+
+/* Both splash elements contain the side image and blog form respectively.
+They are made with flexboxes so resizing them will look correctly. */
 
 .splash {
     display: flex;
@@ -72,6 +93,9 @@ main {
 
 }
 
+
+/* Both these classes are used for theme-switcher and when the function is
+activated the background and outlines will change for appropriate elements */
 
 .dark {
     background-color: black;

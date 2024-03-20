@@ -11,11 +11,13 @@ document.getElementById('blogForm').addEventListener('submit', function(event) {
         blogArray = [];
     }
 
+    // Each piece of the blog for is set to separate lets
+    // These will then be added to the newBlogPost object. 
+
     let username = usernameInput.value;
     let title = titleInput.value;
     let content = contentInput.value;
 
-    // You can process the data further here, e.g., save it to a JSON object or display it on the page
     console.log('Title:', title);
     console.log('Usermame:', username);
     console.log('Content:', content);
@@ -26,6 +28,10 @@ document.getElementById('blogForm').addEventListener('submit', function(event) {
         content: content,
     }
     
+    // The newBlogPost object is pushed onto the blogArray for storage
+    // To store correctly with Chrome's local storage the object is converted
+    // into a JSON string using stringify
+
     blogArray.push(newBlogPost);
     localStorage.setItem('blogArray', JSON.stringify(blogArray));
 
